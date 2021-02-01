@@ -20,6 +20,7 @@ body {
 
 #global {
   width: 80vw;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -32,7 +33,7 @@ body {
   display: block;
   text-align: center;
   color: white;
-  margin: 0 auto 0 auto;
+  margin: 0 0 0 auto;
   background-color: black;
 }
 
@@ -42,7 +43,6 @@ body {
   height: 250px;
   margin: 0 auto;
   position: relative;
-  background-color: palegreen;
 }
 
 .pic {
@@ -66,7 +66,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   width: 75%;
-  margin: 80px auto 0 auto;
+  margin: 50px auto 0 auto;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -101,8 +101,12 @@ h2 {
   width: 75%;
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
+  margin: 30px auto;
   height: auto;
+  font-family: "Times New Roman", Times, serif;
+  /*
+  font-weight: bold;
+  */
 }
 
 h3 {
@@ -135,29 +139,27 @@ a {
   height: 100vh;
   width: 100%;
   margin: auto 0;
-  overflow: hidden;
 }
 
 .article-container {
-  margin: auto 30px;
-  background-color: #faebd7;
+  margin: 0 auto 0 30px;
+  height: 90%;
   display: flex;
   flex-direction: column;
   text-align: justify;
   margin: auto 30px;
-  width: 100%;
-}
-
-.article-title {
-  margin: 30px auto auto 0;
-  font-size: 1.7em;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
 }
 
 .studies {
   margin: 10px auto auto 0;
-  line-height: 1.5em;
-  list-style: none;
+  display: block;
+}
+
+.studies-title {
+  margin: 10px auto auto 0;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .studies-link {
@@ -165,32 +167,158 @@ a {
 }
 
 .work-experience {
-  height: auto;
-  margin: 30px auto auto 0;
+  margin: 10px auto auto 0;
+  line-height: 1.5em;
 }
 
 .work-experience-title {
   margin: 10px auto auto 0;
 }
 
-#competences {
+.skills-list {
+  width: 100%;
+  margin: 20px auto auto 0;
+}
+
+.skills-title {
+  font-size: 1.3em;
+  margin: 10px auto 20px 0;
+}
+
+.skills {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.5em;
-  width: 100%;
+  height: auto;
+  width: 80%;
 }
 
-.languages {
+.gauche {
   margin-left: 10px;
 }
 
-.hobbies {
-  margin-right: 200px;
+.droit {
+  margin-right: 10px;
 }
 
-/*media  queries 764px*/
-@media screen and (min-width: 764px) and (max-width: 1280px) {
+/*mediaqueries for max height 800px*/
+@media (max-height: 800px) {
+  .image {
+    width: 200px;
+    height: 170px;
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }
+
+  .pic {
+    height: 170px;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    margin: 10px auto 5px auto;
+  }
+
+  .studies-title,
+  .work-experience-title,
+  .skills-title {
+    font-size: 1.1em;
+  }
+
+  .studies,
+  .work-experience,
+  .skills {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  /*.languages,
+  .hobbies {
+    font-size: 0.7em;
+  }*/
+}
+
+/*media  queries 1200px*/
+@media screen and (min-width: 680px) and (max-width: 1200px) {
+  #global {
+    width: 95%;
+  }
+  .bloc-gauche {
+    width: 250px;
+    height: 100vh;
+  }
+
+  .image {
+    height: 230px;
+  }
+  .pic {
+    width: 250px;
+    height: 230px;
+  }
+
+  .about {
+    width: 80%;
+  }
+
+  .contact {
+    width: 80%;
+  }
+
+  .article-container {
+    margin: auto 10px;
+  }
+
+  .studies-title {
+    font-size: 1.1em;
+  }
+
+  .studies {
+    width: 95%;
+    margin: 10px auto 0 auto;
+  }
+  .work-experience {
+    margin: 10px auto 0 auto;
+    width: 95%;
+  }
+
+  .skills-list {
+    margin: 10px auto auto 0;
+    width: 95%;
+  }
+  .skills-title {
+    font-size: 1.2em;
+    margin: 10px auto 0 10px;
+  }
+
+  .skills-icon {
+    margin: 0 auto 0 auto;
+  }
+
+  .skills {
+    margin: 5px auto;
+    font-size: 1.1em;
+  }
+
+  .gauche {
+    margin-left: 10px;
+  }
+
+  .droit {
+    margin-right: 10px;
+  }
+  h5 {
+    font-size: 1em;
+  }
+}
+
+/*media  queries tablets */
+@media screen and (min-width: 380px) and (max-width: 679px) {
   #global {
     flex-direction: column;
     width: 90%;
@@ -204,7 +332,7 @@ a {
   }
 
   .image {
-    width: 400px;
+    width: 100%0px;
   }
 
   h1 {
@@ -227,8 +355,8 @@ a {
   }
 }
 
-/*media  queries 564px*/
-@media screen and (min-width: 300px) and (max-width: 763px) {
+/*media  queries phones*/
+@media screen and (min-width: 300px) and (max-width: 379px) {
   #global {
     flex-direction: column;
     width: 95%;
@@ -237,6 +365,7 @@ a {
   .bloc-gauche {
     width: 300px;
     height: max-content;
+    margin: auto;
   }
   .image {
     width: 300px;
@@ -258,9 +387,6 @@ a {
   .about {
     width: 90%;
   }
-  .article-title {
-    font-size: 1.5em;
-  }
 
   .studies {
     margin: auto;
@@ -269,8 +395,16 @@ a {
     width: 90%;
   }
 
+  .studies-title {
+    font-size: 1.3em;
+    margin-top: 20px;
+  }
   .work-experience {
     width: 90%;
     margin: 10px auto;
+  }
+
+  .skills-title {
+    font-size: 1.2em;
   }
 }
